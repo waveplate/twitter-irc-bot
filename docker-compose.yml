@@ -1,0 +1,17 @@
+version: "3.3"
+
+services:
+  twitbot:
+    user: node
+    build: ./docker
+    volumes:
+      - type: bind
+        source: ./config.json
+        target: /home/node/config.json
+      - type: bind
+        source: ./index.ts
+        target: /home/node/index.ts
+      - type: bind
+        source: ./package.json
+        target: /home/node/package.json
+    restart: always

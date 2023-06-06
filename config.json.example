@@ -1,0 +1,31 @@
+{
+    "irc": {
+        "host": "irc.efnet.org",
+        "port": 6697,
+        "nick": "twitbot",
+        "channels": [
+            "#mychannel"
+        ]
+    },
+    "bot": {
+        "twitPic": true,
+        "wrapLen": 60,
+        "maxTweetLength": 400,
+        "ansi": {
+            "width": 10,
+            "contrast": 30
+        },
+        "symbols": {
+            "retweets": "↻",
+            "likes": "❤"
+        }
+    },
+    "twitter": {
+        "subdomain": "api",
+        "version": "1.1",
+        "consumer_key": "",
+        "consumer_secret": "",
+        "access_token_key": "",
+        "access_token_secret": ""
+    }
+}
