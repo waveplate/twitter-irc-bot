@@ -24,6 +24,7 @@ edit `config.json.example`, the `irc` and `twitter` sections are self-explanator
 
 ##### 2) install `npx` and `tsx` if not installed already
 `sudo npm install -g npx`
+
 `sudo npm install -g tsx`
 
 ##### 3) start `twitter-irc-bot`
