@@ -1,7 +1,7 @@
 {
   "name": "twitter-irc-bot",
   "version": "0.1.0",
-  "description": "",
+  "description": "responds to twitter links with a preview of the tweet, with an optional img2irc version of the profile picture",
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
