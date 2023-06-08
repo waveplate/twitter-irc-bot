@@ -15,6 +15,14 @@
             "width": 10,
             "contrast": 30
         },
+        "colors": {
+            "name": "",
+            "user": "",
+            "date": "14",
+            "text": "",
+            "retweets": "09",
+            "likes": "04"
+        },
         "symbols": {
             "retweets": "↻",
             "likes": "❤"
