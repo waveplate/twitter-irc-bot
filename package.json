@@ -1,6 +1,6 @@
 {
   "name": "twitter-irc-bot",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "responds to twitter links with a preview of the tweet, with an optional img2irc version of the profile picture",
   "main": "index.ts",
   "scripts": {
