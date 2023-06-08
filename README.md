@@ -15,19 +15,19 @@ edit `config.json.example`, the `irc` and `twitter` sections are self-explanator
 
 
 # running without docker
-##### 1) build and install `img2irc` (optional)
+### 1) build and install `img2irc` (optional)
 `git clone https://github.com/anatolybazarov/img2irc`
 
 `cd img2irc && cargo build --release`
 
 `sudo cp target/release/img2irc /usr/local/bin`
 
-##### 2) install `npx` and `tsx` if not installed already
+### 2) install `npx` and `tsx` if not installed already
 `sudo npm install -g npx`
 
 `sudo npm install -g tsx`
 
-##### 3) start `twitter-irc-bot`
+### 3) start `twitter-irc-bot`
 `npx tsx index.ts`
 
 # commands
@@ -40,7 +40,7 @@ edit `config.json.example`, the `irc` and `twitter` sections are self-explanator
 
 # optional configuration
 
-##### img2irc
+### img2irc
 
 the `bot.ansi` section controls the arguments which will be sent to `img2irc`, and correspond to the command-line arguments which `img2irc` takes
 
@@ -67,7 +67,7 @@ for flags which do not take any arguments, simply set the value to `true`, e.g.,
         },
 ```
 
-##### text colours
+### text colours
 
 you can change the colour of the display name, username, date, tweet text, retweets and likes
 
@@ -86,7 +86,7 @@ leaving the field blank means no explicit colour. here are the [mirc colour code
 
 if the colour code is a single digit, you should pad it with a leading zero (e.g., `09` instead of `9`)
 
-##### symbols
+### symbols
 
 you can modify which symbols to use for the retweets and likes as well
 
