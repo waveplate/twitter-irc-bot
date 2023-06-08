@@ -1,4 +1,4 @@
-# twitter-irc-bot (0.1.0)
+# twitter-irc-bot (0.1.1)
 this is an irc bot that previews tweets whenever a link to a tweet is posted in a channel
 
 ![twitter-irc-bot](https://i.imgur.com/cI1rIe8.png)
@@ -40,6 +40,8 @@ edit `config.json.example`, the `irc` and `twitter` sections are self-explanator
 
 # optional configuration
 
+##### img2irc
+
 the `bot.ansi` section controls the arguments which will be sent to `img2irc`, and correspond to the command-line arguments which `img2irc` takes
 
 for information about those arguments, see the usage details [here](https://github.com/anatolybazarov/img2irc#usage)
@@ -63,4 +65,34 @@ for flags which do not take any arguments, simply set the value to `true`, e.g.,
             "contrast": 30,
             "sharpen": true
         },
+```
+
+##### text colours
+
+you can change the colour of the display name, username, date, tweet text, retweets and likes
+
+```
+        "colors": {
+            "name": "",
+            "user": "",
+            "date": "14",
+            "text": "",
+            "retweets": "09",
+            "likes": "04"
+        },
+```
+
+leaving the field blank means no explicit colour. here are the [mirc colour codes](https://www.mirc.com/colors.html)
+
+if the colour code is a single digit, you should pad it with a leading zero (e.g., `09` instead of `9`)
+
+##### symbols
+
+you can modify which symbols to use for the retweets and likes as well
+
+```
+        "symbols": {
+            "retweets": "↻",
+            "likes": "❤"
+        }
 ```
