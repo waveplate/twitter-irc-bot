@@ -148,11 +148,25 @@ function drawTweet(tweet: any, event: any): void {
     .format(new Date(tweet.created_at))
     .replace(/,/, '');
 
-    const stats = `\x03\x39${config.bot.symbols.retweets} ${tweet.retweet_count}\x03 \x03\x34${config.bot.symbols.likes} ${tweet.favorite_count}`;
-    let text = `\x1f\x03\x30${tweet.user.name}\x1f \x0315@${tweet.user.screen_name} \x0314${twitDate}\n`;
-    text += wrapText(tweet.full_text, config.bot.wrapLen) + "\n";
-    
+    let stats =  `\x03${config.bot.colors.retweets}${config.bot.symbols.retweets} ${tweet.retweet_count}\x03 `;
+        stats += `\x03${config.bot.colors.likes}${config.bot.symbols.likes} ${tweet.favorite_count}\x03`;
 
+    let text =  `\x03${config.bot.colors.name}\x1f\x02${tweet.user.name}\x02\x1f `;
+        text += `\x03${config.bot.colors.user}@${tweet.user.screen_name} `;
+        text += `\x03${config.bot.colors.date}${twitDate}\n`;
+
+    let wrapped = wrapText(tweet.full_text, config.bot.wrapLen) + "\n";
+
+    if(config.bot.colors.text != ""){
+        let lines = wrapped.split("\n");
+        for(let i = 0; i < lines.length; i++){
+            lines[i] = `\x03${config.bot.colors.text}${lines[i]}\x03`;
+        }
+        wrapped = lines.join("\n");
+    }
+    
+    text += wrapped;
+    
     if(config.bot.twitPic == true) {
         getAnsi(tweet.user.profile_image_url_https, config.bot.ansi).then((ansi) => {
             const textHeight = text.split('\n').length;
@@ -175,4 +189,3 @@ async function getTweet(tweetId: string): Promise<any> {
         console.error(error);
     }
 }
-
