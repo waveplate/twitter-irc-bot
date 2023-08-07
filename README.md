@@ -1,3 +1,5 @@
+### *note: twitter seems to have removed the ability to read tweets from the free tier of the v1.1 API, so if the bot isn't working, that's likely why*
+
 # twitter-irc-bot (0.1.1)
 this is an irc bot that previews tweets whenever a link to a tweet is posted in a channel
 
