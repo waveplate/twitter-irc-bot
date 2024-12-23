@@ -1,5 +1,7 @@
 > [!WARNING]
 > this project uses twikit, as you cannot retrieve tweets using the free tier of the API any longer. **this can get you suspended**, which i found out today
+>
+> you are likely better off using [x-formerly-known-as-twitter-irc-bot](https://github.com/waveplate/x-formerly-known-as-twitter-irc-bot), which retrieves tweets via rapidapi (2000 free request/month)
 
 # twitter-irc-bot (0.1.1)
 this is an irc bot that previews tweets whenever a link to a tweet is posted in a channel
