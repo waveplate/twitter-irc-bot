@@ -21,20 +21,20 @@ edit `config.json.example`, the `irc` and `twitter` sections are self-explanator
 
 to build from source
 
-`git clone https://github.com/waveplate/img2irc`
-
-`cd img2irc && cargo build --release`
-
-`sudo cp target/release/img2irc /usr/local/bin`
+    git clone https://github.com/waveplate/img2irc
+    cd img2irc && cargo build --release
+    sudo cp target/release/img2irc /usr/local/bin
 
 or use the statically linked x86_64 musl binary (recommended)
 
+    cd /tmp
+    wget https://github.com/waveplate/img2irc/releases/download/v1.1.0/img2irc-1.1.0-linux-x86_64.tar.gz
+    sudo tar -xzf img2irc-1.1.0-linux-x86_64.tar.gz -C /usr/local/bin --strip-components=1 img2irc-1.1.0/img2irc
+    rm -rf img2irc-1.1.0-linux-x86_64.tar.gz
 
-      cd /tmp
-      wget https://github.com/waveplate/img2irc/releases/download/v1.1.0/img2irc-1.1.0-linux-x86_64.tar.gz
-      sudo tar -xzf img2irc-1.1.0-linux-x86_64.tar.gz -C /usr/local/bin --strip-components=1 img2irc-1.1.0/img2irc
-      rm -rf img2irc-1.1.0-linux-x86_64.tar.gz
+or if you use arch
 
+    yay -S img2irc-bin
 
 ### 2) install dependencies
 `pip install irc twikit asyncio requests`
